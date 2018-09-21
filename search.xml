@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo-NetX 主题细节记录]]></title>
+    <url>%2F2018%2F09%2F21%2F2018-9-21-hexomeihua%2F</url>
+    <content type="text"><![CDATA[花了两天整把博客做好了，不知道写一些什么，就把印象笔记里复制的乱糟糟美化方法整理一下吧 1.主页文章添加边框阴影效果打开’themes/next/source/css/_custom/custom.styl’，添加代码 12345678// 主页文章添加阴影效果.post &#123; margin-top: 0px; margin-bottom: 60px; padding: 25px; -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5); -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);&#125; 2.添加本地搜索功能在你站点的根目录下1$ npm install hexo-generator-searchdb --save 打开 Hexo 站点的 _config.yml,添加配置 12345search: path: search.xml field: post format: html limit: 10000 打开 themes/next/_config.yml ,搜索关键字 local_search ,设置为 true： 123456789# Local search# Dependencies: https://github.com/flashlab/hexo-generator-searchlocal_search: enable: true # if auto, trigger search by changing input # if manual, trigger search by pressing enter key or search button trigger: auto # show top n results per article, show all results by setting to -1 top_n_per_article: 1 3.统计功能:显示文章字数统计,阅读时长,总字数在站点的根目录下： 1$ npm i --save hexo-wordcount 打开 themes/next/_config.yml ，搜索关键字 post_wordcount： 12345678910# Post wordcount display settings# Dependencies: https://github.com/willin/hexo-wordcountpost_wordcount: item_text: true #字数统计 wordcount: true #预览时间 min2read: true #总字数,显示在页面底部 totalcount: true separated_meta: true 4. 参考来源： 1.Next主题:修改超链接黑色字体为蓝色 2.hexo + next主题高级配置 3.为NexT主题添加文章阅读量统计功能 4.[HEXO] NexT 主题提高博客颜值]]></content>
+      <categories>
+        <category>HEXO美化</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Welcome]]></title>
     <url>%2F2018%2F09%2F21%2F1%2F</url>
-    <content type="text"><![CDATA[君は広い客席を见渡す远く后ろのほうに目を向ける一番后ろで拍手を送るのは地球を一周して见た 君だ · 耗时48小时，终于将效果比较满意的blog做出来了，这是我近期唯一一件可以认真投入其中不理人的事情了。感谢偶滴可爱队友琦对博客的推荐，让我终于可以沉下心好好做一件事了。接下来的一年半继续努力啊&gt;&lt; 以后会在这里添加一些学习记录，另外主题优化过程也会慢慢更新，希望可以坚持。 话是怎么说来着，投入与产出成正比。]]></content>
+    <content type="text"><![CDATA[君は広い客席を见渡す远く后ろのほうに目を向ける一番后ろで拍手を送るのは地球を一周して见た 君だ 耗时48小时，终于将效果比较满意的blog做出来了，这是我近期唯一一件可以认真投入其中不理人的事情了。感谢偶滴可爱队友琦对博客的推荐，让我终于可以沉下心好好做一件事了。接下来的一年半继续努力啊&gt;&lt; 以后会在这里添加一些学习记录，另外主题优化过程也会慢慢更新，希望可以坚持。 话是怎么说来着，投入与产出成正比。]]></content>
       <categories>
         <category>Welcome</category>
       </categories>
@@ -16,7 +27,7 @@
     <url>%2F2018%2F09%2F19%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
       <tags>
-        <tag>Hello World</tag>
+        <tag>Hello world</tag>
       </tags>
   </entry>
 </search>
