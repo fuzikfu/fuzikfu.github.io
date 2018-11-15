@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[C.Cpp怎样读取整行字符串进入数组]]></title>
+    <url>%2F2018%2F11%2F15%2F1%2F</url>
+    <content type="text"><![CDATA[做PAT的时候找到了C/C++整行读入字符串的方法，记录一下~ 方法一： scanf()读入char[]方法：123char str[1024];scanf("%[^\n]",&amp;str);getchar() 在scanf函数中，可以使用%c来读取一个字符，使用%s读取一个字符串,但是读取字符串时不忽略空格，读字符串时忽略开始的空格，并且读到空格为止，因此只能读取一个单词，而不是整行字符串。 %[ ] 可以读入一个字符集合，[]为集合的标志，%[]特指读入此集合所限定的那些字符比如%[A-Z]是输入大写字母，一旦遇到不在此集合的字符便停止。如果集合的第一个字符是”^”，这说明读取不在”^”后面集合的字符，既遇到”^”后面集合的字符便停止。注意此时读入的字符串是可以含有空格的，而且会把开头的空格也读进来。 注意：如果要循环的多次从屏幕上读取一行的话，就要在读取一行后，在用%c读取一个字符，将输入缓冲区中的换行符给读出来。否则的话，在下一次读取一行的时候，第一个就遇到’\n’，匹配不成功就直接返回了。这里可以用scanf()或者getchar()函数读取换行符。 方法二： getchar()读入char[]方法：12345char str[1024];int i=0;while((str[i]=getchar())!='\n') i++;getchar(); 说明：这样一个一个读也可以，也会把开头的空格读进来。最后也需要考虑换行符，使用getchar()读出来。 方法三： gets()读入char[]方法：12char str[1024];gets(str); 说明：感觉这个就是多个getchar的集合函数，很好用。功能是从标准输入键盘上读入一个完整的行（从标准输入读，一直读到遇到换行符），把读到的内容存入括号中指定的字符数组里，并用空字符’\0’取代行尾的换行符’\n’。读入时不需要考虑换行符。 方法四： getline()读入string 或者char[]方法：12345string str;getline(cin,str);//读入stringchar str2[1024];cin.getline(str2,1024);//读入char数组 说明：这是比较常用的方法，cin.getline第三个参数表示间隔符，默认为换行符’\n’。读入不需要考虑最后的换行符。 方法五： get()读入char[]方法：12char str3[1024];cin.get(str3,1024);//读入char数组 说明：get函数读入时需要考虑最后的换行符，也就是说，如果用get读入多行数据，要把’\n’另外读出来，一般使用cin.get(str,1024).get();来读入多组数据。]]></content>
+      <categories>
+        <category>C</category>
+        <category>Cpp</category>
+      </categories>
+      <tags>
+        <tag>C</tag>
+        <tag>Cpp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[（施工中）吴恩达机器学习笔记（一）]]></title>
+    <url>%2F2018%2F10%2F22%2F%E6%9C%AA%E5%AE%8C%E6%88%90%2F%E5%90%B4%E6%81%A9%E8%BE%BE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>吴恩达机器学习</category>
+      </categories>
+      <tags>
+        <tag>吴恩达</tag>
+        <tag>机器学习</tag>
+        <tag>Machine Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[（施工中）关于大学期间的反思]]></title>
+    <url>%2F2018%2F09%2F23%2F2018-9-23-%E5%85%B3%E4%BA%8E%E6%95%B4%E4%B8%AA%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E6%80%9D%2F</url>
+    <content type="text"><![CDATA[。 对两年间行为的认知（出于什么目的） 弱点/需要改正的地方/做得不对的地方 日后的规划/想法/方向 展望 虽然反思的想法常有，但是并不会持久的出现在我的脑海中，也不会真正的去尝试去想什么或者打算去改变什么。趁着中秋节长假，好好思考一下自己的问题。 对两年来行为的认知出于什么目的 到现在为止，大学也是整整过了两年半，基本算是有了成熟的价值观（也许吧）。但是经历的越多，得到的越多，失去的同样也很多。我完全想不起来我上大学的初心、高中的问题甚至是几个月前订定好的规划 关于这两年行为的反思]]></content>
+      <categories>
+        <category>反思</category>
+      </categories>
+      <tags>
+        <tag>反思</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo-NetX 主题优化细节记录]]></title>
     <url>%2F2018%2F09%2F21%2F2018-9-21-hexomeihua%2F</url>
     <content type="text"><![CDATA[花了两天整把博客做好了，不知道写一些什么，就把印象笔记里复制的乱糟糟美化方法整理一下吧 1.主页文章添加边框阴影效果打开’themes/next/source/css/_custom/custom.styl’，添加代码 12345678// 主页文章添加阴影效果.post &#123; margin-top: 0px; margin-bottom: 60px; padding: 25px; -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5); -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);&#125; 2.添加本地搜索功能在你站点的根目录下1$ npm install hexo-generator-searchdb --save 打开 Hexo 站点的 _config.yml,添加配置 12345search: path: search.xml field: post format: html limit: 10000 打开 themes/next/_config.yml ,搜索关键字 local_search ,设置为 true： 123456789# Local search# Dependencies: https://github.com/flashlab/hexo-generator-searchlocal_search: enable: true # if auto, trigger search by changing input # if manual, trigger search by pressing enter key or search button trigger: auto # show top n results per article, show all results by setting to -1 top_n_per_article: 1 3.统计功能:显示文章字数统计,阅读时长,总字数在站点的根目录下： 1$ npm i --save hexo-wordcount 打开 themes/next/_config.yml ，搜索关键字 post_wordcount： 12345678910# Post wordcount display settings# Dependencies: https://github.com/willin/hexo-wordcountpost_wordcount: item_text: true #字数统计 wordcount: true #预览时间 min2read: true #总字数,显示在页面底部 totalcount: true separated_meta: true 4.网站标题栏背景颜色在 next/source/css/_custom 目录下面专门提供了 custom.styl 供我们自定义样式的，可以在 custom.styl 里面添加： 1234// Custom styles..site-meta &#123; background: $blue; //修改为自己喜欢的颜色&#125; 5.修改文章间分割线打开 themes/next/source/css/_common/components/post/post-eof.styl ,修改： 12345678910.posts-expand &#123; .post-eof &#123; display: block; // margin: $post-eof-margin-top auto $post-eof-margin-bottom; width: 0%; //分割线长度 height: 0px; // 分割线高度 background: $grey-light; text-align: center; &#125;&#125; 6.各版块透明度修改内容板块透明博客根目录 themes\next\source\css_schemes\Pisces_layout.styl 文件 .content-wrap 标签下 background: white修改为： 1background: rgba(255,255,255,0.7); //0.7是透明度 菜单栏背景博客根目录 themes\next\source\css_schemes\Pisces_layout.styl 文件 .header-inner 标签下 background: white修改为： 1background: rgba(255,255,255,0.7); //0.7是透明度 站点概况背景博客根目录 themes\next\source\css_schemes\Pisces_sidebar.styl 文件 .sidebar-inner 标签下 background: white修改为： 1background: rgba(255,255,255,0.7); //0.7是透明度 然后修改博客根目录 themes\next\source\css_schemes\Pisces_layout.styl 文件 .sidebar 标签下 background: $body-bg-color修改为： 1background: rgba(255,255,255,0.7); //0.7是透明度 按钮背景博客根目录 themes\next\source\css_common\components\post\post-button.styl 同上修改对应位置为 1background: transparent; 7.修改文章底部的那个带#号的标签为图标修改模板/themes/next/layout/_macro/post.swig，搜索 rel=”tag”&gt;#，将 # 换成 8.博文置顶修改 hero-generator-index 插件，把文件：node_modules/hexo-generator-index/lib/generator.js 内的代码替换为： 12345678910111213141516171819202122232425262728'use strict'; var pagination = require('hexo-pagination'); module.exports = function(locals)&#123; var config = this.config; var posts = locals.posts; posts.data = posts.data.sort(function(a, b) &#123; if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义 if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排 else return b.top - a.top; // 否则按照top值降序排 &#125; else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233） return -1; &#125; else if(!a.top &amp;&amp; b.top) &#123; return 1; &#125; else return b.date - a.date; // 都没定义按照文章日期降序排 &#125;); var paginationDir = config.pagination_dir || 'page'; return pagination('', posts, &#123; perPage: config.index_generator.per_page, layout: ['index', 'archive'], format: paginationDir + '/%d/', data: &#123; __index: true &#125; &#125;);&#125;; 在文章中添加 top 值，数值越大文章越靠前，如 12345678---title: 解决Charles乱码问题date: 2017-05-22 22:45:48tags: 技巧categories: 技巧copyright: truetop: 100--- 参考来源： 1.Next主题:修改超链接黑色字体为蓝色 2.hexo + next主题高级配置 3.为NexT主题添加文章阅读量统计功能 4.[HEXO] NexT 主题提高博客颜值 5.Hexo+Next个人博客主题优化]]></content>
