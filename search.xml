@@ -6,11 +6,6 @@
     <content type="text"><![CDATA[在没有墙翻的时候。。 清华：https://mirrors.tuna.tsinghua.edu.cn阿里云http://mirrors.aliyun.com/pypi 中国科技大学https://pypi.mirrors.ustc.edu.cn 豆瓣(douban)http://pypi.douban.com 清华大学https://pypi.tuna.tsinghua.edu.cn 中国科学技术大学http://pypi.mirrors.ustc.edu.cn]]></content>
   </entry>
   <entry>
-    <title><![CDATA[一些镜像地址]]></title>
-    <url>%2F2019%2F04%2F24%2F1%2F</url>
-    <content type="text"><![CDATA[在没有墙翻的时候。。 清华：https://pypi.tuna.tsinghua.edu.cn/simple/阿里云http://mirrors.aliyun.com/pypi/simple/ 中国科技大学https://pypi.mirrors.ustc.edu.cn/simple/ 豆瓣(douban)http://pypi.douban.com/simple/ 清华大学https://pypi.tuna.tsinghua.edu.cn/simple/ 中国科学技术大学http://pypi.mirrors.ustc.edu.cn/simple/]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[python深度学习笔记1]]></title>
     <url>%2F2019%2F04%2F24%2F1%2F</url>
     <content type="text"><![CDATA[折腾了一晚上，放弃了Ubuntu。 本篇主要记录刚安装好Anaconda后出现的一些环境的解决方案。 事实证明曲线救国也没什么卵用，还是四个小时解决了俩环境问题:) 安装TensorFlow和keraspython3版本的快速安装(镜像网站) 12pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple/ --upgrade tensorflow # for Python 3.*pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple/ --upgrade tensorflow-gpu # for Python 3.* and GPU 问题解决pip install tensorflow 后无法 import12345#**注意翻墙**#在anaconda prompt中conda create -n tensorflow python=3.7activate tensorflowconda install scikit-learn 依旧报错1.报错1： “No module named ‘numpy.core._multiarray_umath’” 解决方案：更新numpy1pip install -U numpy 2.更新numpy时报错2： “Could not install packages due to an EnvironmentError: [WinError 5] 拒绝访问。: ‘d:\anaconda3-5.3.0\lib\site-packages\numpy\core\multiarray.cp37-win_amd64.pyd’ Consider using the --user option or check the permissions.” 解决方案：在install后面添加 --user1pip install --user -U numpy 引入keras后出现的&quot;Using TensorFlow backend&quot;的错误在引入头文件之后，加入12import osos.environ['KERAS_BACKEND']='tensorflow']]></content>
