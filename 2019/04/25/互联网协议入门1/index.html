@@ -451,7 +451,7 @@
 <a id="more"></a>
 <hr>
 <h1>一、 概述</h1>
-<h2 id="1-五层模型"><a class="header-anchor" href="#1-五层模型">¶</a>1. 五层模型</h2>
+<h2 id="1-五层模型">1. 五层模型</h2>
 <p>OSI模型（7层）</p>
 <table>
 	<tr>
@@ -482,14 +482,14 @@
 <li>应用层（Application Layer）</li>
 </ol>
 <p>越下面的层越靠近硬件，越上面的层越靠近用户。</p>
-<h2 id="2-层与协议"><a class="header-anchor" href="#2-层与协议">¶</a>2. 层与协议</h2>
+<h2 id="2-层与协议">2. 层与协议</h2>
 <p>互联网的每一层，都定义了很多协议（protocol），总称叫“互联网协议”（Internet Protocol）。它们是互联网的核心</p>
 <h1>二、 实体层</h1>
 <p>链接每个电脑，规定了网络的电器特性，作用是负责传送0和1的电信号。</p>
 <h1>三、 链接层</h1>
-<h2 id="1-定义"><a class="header-anchor" href="#1-定义">¶</a>1. 定义</h2>
+<h2 id="1-定义">1. 定义</h2>
 <p>规定了0和1的分组方式</p>
-<h2 id="2-以太网协议"><a class="header-anchor" href="#2-以太网协议">¶</a>2. 以太网协议</h2>
+<h2 id="2-以太网协议">2. 以太网协议</h2>
 <p>以太网（Ethernet）<br>
 帧（Frame）：标头（Head）+数据（Data），每一帧包含64~1518字节，如果数据很长，需要分成多个帧发送。</p>
 <table>
@@ -513,14 +513,14 @@
 </tr>
 </tbody>
 </table>
-<h2 id="3-mac地址"><a class="header-anchor" href="#3-mac地址">¶</a>3. MAC地址</h2>
+<h2 id="3-mac地址">3. MAC地址</h2>
 <p>以太网规定，连入网络的所有设备，都必须具有“网卡”接口。每块网卡都有独一无二的MAC地址，48个二进制位，通常用12个十六进制数表示。</p>
 <ul>
 <li>例如：MAC Address ： 00-B0-D0-86-BB-F7<br>
 前六个十六进制： 厂商编号<br>
 猴六个十六进制： 网卡流水号</li>
 </ul>
-<h2 id="4-广播-broadcasting"><a class="header-anchor" href="#4-广播-broadcasting">¶</a>4. 广播（Broadcasting）</h2>
+<h2 id="4-广播-broadcasting">4. 广播（Broadcasting）</h2>
 <ol>
 <li>APR协议<br>
 以太网数据包必须知道接收方的MAC地址才能发送</li>
@@ -528,9 +528,9 @@
 以太网采用广播的方式，让所有计算机作为接收方，自行判断自己是否为接收方。（比较接收方的MAC地址与自己的是否相同）</li>
 </ol>
 <h1>四、 网络层</h1>
-<h2 id="1-网络层的由来"><a class="header-anchor" href="#1-网络层的由来">¶</a>1 网络层的由来</h2>
+<h2 id="1-网络层的由来">1 网络层的由来</h2>
 <p>需要区分MAC地址是否属于同一个子网络。如果是同一个子网络，采用广播的方式，否则采用路由的方式。（路由：指如何向不同的子网络分发数据包）。于是有了<strong>网络层</strong>，一套新的地址系统，用于<strong>区分不同的计算机是否属于同一个子网络</strong>，叫“网络地址”/“网址”。</p>
-<h2 id="2-ip协议"><a class="header-anchor" href="#2-ip协议">¶</a>2 IP协议</h2>
+<h2 id="2-ip协议">2 IP协议</h2>
 <p>规定网络地址的协议。所定义的地址被称为IP地址。广泛采用<strong>IPv4协议</strong>，规定，网络地址由32个二进制位组成。</p>
 <p>IP Address： 172.16.254.1（10101100.00010000.11111110.00000001）<br>
 IP地址范围： 0.0.0.0 ~ 255.255.255.255（习惯上用四段十进制表示）<br>
@@ -724,7 +724,7 @@ IP地址范围： 0.0.0.0 ~ 255.255.255.255（习惯上用四段十进制表示�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">一、 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-五层模型"><span class="nav-text">¶1. 五层模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-层与协议"><span class="nav-text">¶2. 层与协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">二、 实体层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">三、 链接层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-定义"><span class="nav-text">¶1. 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-以太网协议"><span class="nav-text">¶2. 以太网协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-mac地址"><span class="nav-text">¶3. MAC地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-广播-broadcasting"><span class="nav-text">¶4. 广播（Broadcasting）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">四、 网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-网络层的由来"><span class="nav-text">¶1 网络层的由来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-ip协议"><span class="nav-text">¶2 IP协议</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">一、 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-五层模型"><span class="nav-text">1. 五层模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-层与协议"><span class="nav-text">2. 层与协议</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">二、 实体层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">三、 链接层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-定义"><span class="nav-text">1. 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-以太网协议"><span class="nav-text">2. 以太网协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-mac地址"><span class="nav-text">3. MAC地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-广播-broadcasting"><span class="nav-text">4. 广播（Broadcasting）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">四、 网络层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-网络层的由来"><span class="nav-text">1 网络层的由来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-ip协议"><span class="nav-text">2 IP协议</span></a></li></ol></li></ol></div>
             
 
           </div>

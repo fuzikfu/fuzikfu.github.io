@@ -454,10 +454,10 @@
 <h1>安装TensorFlow和keras</h1>
 <p>python3版本的快速安装(镜像网站)</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple/ --upgrade tensorflow     <span class="comment"># for Python 3.*</span></span><br><span class="line">pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple/ --upgrade tensorflow-gpu <span class="comment"># for Python 3.* and GPU</span></span><br></pre></td></tr></table></figure>
-<h2 id="问题解决"><a class="header-anchor" href="#问题解决">¶</a>问题解决</h2>
-<h3 id="pip-install-tensorflow-后无法-import"><a class="header-anchor" href="#pip-install-tensorflow-后无法-import">¶</a><code>pip install tensorflow</code> 后无法 <code>import</code></h3>
+<h2 id="问题解决">问题解决</h2>
+<h3 id="pip-install-tensorflow-后无法-import"><code>pip install tensorflow</code> 后无法 <code>import</code></h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#**注意翻墙**</span></span><br><span class="line"><span class="comment">#在anaconda prompt中</span></span><br><span class="line">conda create -n tensorflow python=<span class="number">3.7</span></span><br><span class="line">activate tensorflow</span><br><span class="line">conda install scikit-learn</span><br></pre></td></tr></table></figure>
-<h3 id="依旧报错"><a class="header-anchor" href="#依旧报错">¶</a>依旧报错</h3>
+<h3 id="依旧报错">依旧报错</h3>
 <p><strong>1.报错1：</strong></p>
 <p><em>“No module named ‘numpy.core._multiarray_umath’”</em></p>
 <p><strong>解决方案：</strong><br>
@@ -468,7 +468,7 @@
 <p><strong>解决方案：</strong><br>
 在install后面添加 <code>--user</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --user -U numpy</span><br></pre></td></tr></table></figure>
-<h3 id="引入keras后出现的-using-tensorflow-backend-的错误"><a class="header-anchor" href="#引入keras后出现的-using-tensorflow-backend-的错误">¶</a>引入keras后出现的<code>&quot;Using TensorFlow backend&quot;</code>的错误</h3>
+<h3 id="引入keras后出现的-using-tensorflow-backend-的错误">引入keras后出现的<code>&quot;Using TensorFlow backend&quot;</code>的错误</h3>
 <p>在引入头文件之后，加入</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">'KERAS_BACKEND'</span>]=<span class="string">'tensorflow'</span></span><br></pre></td></tr></table></figure>
 <hr>
@@ -663,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">安装TensorFlow和keras</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-text">¶问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pip-install-tensorflow-后无法-import"><span class="nav-text">¶pip install tensorflow 后无法 import</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依旧报错"><span class="nav-text">¶依旧报错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入keras后出现的-using-tensorflow-backend-的错误"><span class="nav-text">¶引入keras后出现的&quot;Using TensorFlow backend&quot;的错误</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">安装TensorFlow和keras</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-text">问题解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pip-install-tensorflow-后无法-import"><span class="nav-text">pip install tensorflow 后无法 import</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依旧报错"><span class="nav-text">依旧报错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入keras后出现的-using-tensorflow-backend-的错误"><span class="nav-text">引入keras后出现的&quot;Using TensorFlow backend&quot;的错误</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
