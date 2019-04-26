@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[互联网协议入门1]]></title>
     <url>%2F2019%2F04%2F25%2F%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A81%2F</url>
-    <content type="text"><![CDATA[系统视角看互联网的五层结构 互联网五层结构（自底向上）： 实体层（Physical Layer） 链接层（Link Layer） 网络层（Network Layer） 传输层（Transport Layer） 应用层（Application Layer） 越下面的层越靠近硬件，越上面的层越靠近用户。 一、应用层一、链接层]]></content>
+    <content type="text"><![CDATA[系统视角看互联网的五层结构 一、 概述 ¶1. 五层模型 OSI模型（7层） 应用层 表示层 会话层 传输层 网络层 数据链路层 物理层 TCP/IP模型（4层） 应用层、传输层、网际层、网络接口层 互联网五层结构（自底向上）： 1.实体层（Physical Layer） 2.链接层（Link Layer） 3.网络层（Network Layer） 4.传输层（Transport Layer） 5.应用层（Application Layer） 越下面的层越靠近硬件，越上面的层越靠近用户。 一、层与协议 一、应用层 一、链接层]]></content>
       <categories>
         <category>计算机网络</category>
       </categories>
