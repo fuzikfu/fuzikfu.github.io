@@ -448,20 +448,28 @@
 
       
         <center>做PAT的时候找到了C/C++整行读入字符串的方法，记录一下~</center>
-
-
 <a id="more"></a>
-<h1 id="方法一：-scanf-读入char"><a href="#方法一：-scanf-读入char" class="headerlink" title="方法一： scanf()读入char[]"></a>方法一： scanf()读入char[]</h1><p>方法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%[^\n]"</span>,&amp;str);</span><br><span class="line">getchar()</span><br></pre></td></tr></table></figure></p>
+<h1>方法一： scanf()读入char[]</h1>
+<p>方法：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%[^\n]"</span>,&amp;str);</span><br><span class="line">getchar()</span><br></pre></td></tr></table></figure>
 <p>在scanf函数中，可以使用%c来读取一个字符，使用%s读取一个字符串,<strong>但是读取字符串时不忽略空格</strong>，读字符串时忽略开始的空格，并且读到空格为止，因此<strong>只能读取一个单词</strong>，而不是整行字符串。</p>
-<p><strong>%[ ]</strong> 可以读入一个字符集合，[]为集合的标志，%[]特指读入此集合所限定的那些字符比如%[A-Z]是输入大写字母，一旦遇到不在此集合的字符便停止。如果集合的第一个字符是”^”，这说明读取不在”^”后面集合的字符，既遇到”^”后面集合的字符便停止。注意此时读入的字符串是可以含有空格的，而且会把开头的空格也读进来。</p>
-<p>注意：如果要循环的多次从屏幕上读取一行的话，就要在读取一行后，在用%c读取一个字符，将输入缓冲区中的换行符给读出来。否则的话，在下一次读取一行的时候，第一个就遇到’\n’，匹配不成功就直接返回了。这里可以用<strong>scanf()</strong>或者<strong>getchar()</strong>函数读取换行符。</p>
-<h1 id="方法二：-getchar-读入char"><a href="#方法二：-getchar-读入char" class="headerlink" title="方法二： getchar()读入char[]"></a>方法二： getchar()读入char[]</h1><p>方法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>((str[i]=getchar())!=<span class="string">'\n'</span>)</span><br><span class="line">    i++;</span><br><span class="line">getchar();</span><br></pre></td></tr></table></figure></p>
+<p><strong>%[ ]</strong> 可以读入一个字符集合，[]为集合的标志，%[]特指读入此集合所限定的那些字符比如%[A-Z]是输入大写字母，一旦遇到不在此集合的字符便停止。如果集合的第一个字符是&quot;<sup>&quot;，这说明读取不在&quot;</sup>“后面集合的字符，既遇到”^&quot;后面集合的字符便停止。注意此时读入的字符串是可以含有空格的，而且会把开头的空格也读进来。</p>
+<p>注意：如果要循环的多次从屏幕上读取一行的话，就要在读取一行后，在用%c读取一个字符，将输入缓冲区中的换行符给读出来。否则的话，在下一次读取一行的时候，第一个就遇到’\n’，匹配不成功就直接返回了。这里可以用**scanf()<strong>或者</strong>getchar()**函数读取换行符。</p>
+<h1>方法二： getchar()读入char[]</h1>
+<p>方法：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line"><span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span>((str[i]=getchar())!=<span class="string">'\n'</span>)</span><br><span class="line">    i++;</span><br><span class="line">getchar();</span><br></pre></td></tr></table></figure>
 <p>说明：这样一个一个读也可以，也会把开头的空格读进来。最后也需要考虑换行符，使用getchar()读出来。</p>
-<h1 id="方法三：-gets-读入char"><a href="#方法三：-gets-读入char" class="headerlink" title="方法三： gets()读入char[]"></a>方法三： gets()读入char[]</h1><p>方法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line">gets(str);</span><br></pre></td></tr></table></figure></p>
+<h1>方法三： gets()读入char[]</h1>
+<p>方法：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">1024</span>];</span><br><span class="line">gets(str);</span><br></pre></td></tr></table></figure>
 <p>说明：感觉这个就是多个getchar的集合函数，很好用。功能是从标准输入键盘上读入一个完整的行（从标准输入读，一直读到遇到换行符），把读到的内容存入括号中指定的字符数组里，并用空字符’\0’取代行尾的换行符’\n’。<strong>读入时不需要考虑换行符</strong>。</p>
-<h1 id="方法四：-getline-读入string-或者char"><a href="#方法四：-getline-读入string-或者char" class="headerlink" title="方法四： getline()读入string 或者char[]"></a>方法四： getline()读入string 或者char[]</h1><p>方法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str;</span><br><span class="line">getline(<span class="built_in">cin</span>,str);<span class="comment">//读入string</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> str2[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">cin</span>.getline(str2,<span class="number">1024</span>);<span class="comment">//读入char数组</span></span><br></pre></td></tr></table></figure></p>
+<h1>方法四： getline()读入string 或者char[]</h1>
+<p>方法：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str;</span><br><span class="line">getline(<span class="built_in">cin</span>,str);<span class="comment">//读入string</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> str2[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">cin</span>.getline(str2,<span class="number">1024</span>);<span class="comment">//读入char数组</span></span><br></pre></td></tr></table></figure>
 <p>说明：这是比较常用的方法，cin.getline第三个参数表示间隔符，默认为换行符’\n’。读入不需要考虑最后的换行符。</p>
-<h1 id="方法五：-get-读入char"><a href="#方法五：-get-读入char" class="headerlink" title="方法五： get()读入char[]"></a>方法五： get()读入char[]</h1><p>方法：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str3[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">cin</span>.get(str3,<span class="number">1024</span>);<span class="comment">//读入char数组</span></span><br></pre></td></tr></table></figure></p>
+<h1>方法五： get()读入char[]</h1>
+<p>方法：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str3[<span class="number">1024</span>];</span><br><span class="line"><span class="built_in">cin</span>.get(str3,<span class="number">1024</span>);<span class="comment">//读入char数组</span></span><br></pre></td></tr></table></figure>
 <p>说明：get函数读入时需要考虑最后的换行符，也就是说，如果用get读入多行数据，要把’\n’另外读出来，一般使用cin.get(str,1024).get();来读入多组数据。</p>
 <hr>
 
@@ -655,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法一：-scanf-读入char"><span class="nav-text">方法一： scanf()读入char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法二：-getchar-读入char"><span class="nav-text">方法二： getchar()读入char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法三：-gets-读入char"><span class="nav-text">方法三： gets()读入char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法四：-getline-读入string-或者char"><span class="nav-text">方法四： getline()读入string 或者char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法五：-get-读入char"><span class="nav-text">方法五： get()读入char[]</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">方法一： scanf()读入char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">方法二： getchar()读入char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">方法三： gets()读入char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">方法四： getline()读入string 或者char[]</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-text">方法五： get()读入char[]</span></a></li></ol></div>
             
 
           </div>
@@ -696,7 +704,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.6k</span>
+    <span title="Site words total count">3.2k</span>
   
 </div>
 
