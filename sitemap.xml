@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://fuzikfu.com/2019/04/25/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A81/</loc>
+    <loc>https://fuzikfu.com/2019/04/28/:year/:month/:day/:title.html/</loc>
     
-    <lastmod>2019-04-26T15:14:34.015Z</lastmod>
+    <lastmod>2019-04-28T12:58:18.653Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://fuzikfu.com/diary/index.html</loc>
     
-    <lastmod>2019-04-26T04:59:04.566Z</lastmod>
+    <lastmod>2019-04-28T06:17:09.028Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fuzikfu.com/2019/04/25/%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A81/</loc>
+    
+    <lastmod>2019-04-26T15:14:34.015Z</lastmod>
     
   </url>
   
