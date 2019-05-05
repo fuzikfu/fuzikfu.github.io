@@ -105,7 +105,7 @@
 <meta property="og:description" content="第三章 数据链路层">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://fuzikfu.com/img/%E4%BB%A5%E5%A4%AA%E7%BD%91V2%E6%A0%87%E5%87%86%E5%B8%A7%E6%A0%BC%E5%BC%8F.jpg">
-<meta property="og:updated_time" content="2019-05-03T15:33:28.048Z">
+<meta property="og:updated_time" content="2019-05-05T13:44:08.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络-第三章-数据链路层">
 <meta name="twitter:description" content="第三章 数据链路层">
@@ -371,8 +371,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-05-03T23:33:28+08:00">
-                2019-05-03
+              <time title="更新于" itemprop="dateModified" datetime="2019-05-05T21:44:08+08:00">
+                2019-05-05
               </time>
             
           </span>
@@ -621,6 +621,55 @@ a越大，表明争用期所占的比例越大，每发生一次碰撞就浪费�
 <ol start="2">
 <li>IEEE 802.3标准</li>
 </ol>
+<h2 id="扩展的以太网">扩展的以太网</h2>
+<h3 id="物理层的扩展">物理层的扩展</h3>
+<p><strong>集线器</strong>级联，使网络中计算机数量增加，组建了一个大的冲突域：</p>
+<h3 id="数据链路层的扩展">数据链路层的扩展</h3>
+<p><strong>优化：</strong><br>
+数据链路层扩展局域网是使用<strong>网桥</strong>。<br>
+网桥会根据MAC帧的目的地址对收到的帧进行转发。<br>
+网桥具有过滤帧的功能，当网桥收到一个帧时，并不是向所有的接口转发此帧，二十先检查此帧的目的MAC地址，然后再确定该帧转发到哪一个接口。</p>
+<p>接着网桥进化为<strong>交换机</strong>！</p>
+<p>交换机的端口带宽独享  安全  基于MAC地址转发（通过学习构建MAC地址表）<br>
+交换机可以全双工</p>
+<h2 id="高速以太网">高速以太网</h2>
+<h3 id="100base-t">100BASE-T</h3>
+<p>双绞线上传输100Mbint/s基带信号的星形拓扑以太网<br>
+IEEE 802.3 /  CSMA/CD协议</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">媒体</th>
+<th style="text-align:center">网段最大长度</th>
+<th style="text-align:left">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100BASE-TX</td>
+<td style="text-align:center">铜缆</td>
+<td style="text-align:center">100m</td>
+<td style="text-align:left">两队UTP5类线或屏蔽双绞线STP</td>
+</tr>
+<tr>
+<td style="text-align:center">100BAST-T4</td>
+<td style="text-align:center">铜缆</td>
+<td style="text-align:center">100m</td>
+<td style="text-align:left">4对UTP3类线或5类线</td>
+</tr>
+<tr>
+<td style="text-align:center">100BASE-FX</td>
+<td style="text-align:center">光缆</td>
+<td style="text-align:center">2000m</td>
+<td style="text-align:left">两根光纤，发送和接受各一根</td>
+</tr>
+</tbody>
+</table>
+<p>100BASE-TX、100BASE-FX  合称为00BASE-X</p>
+<h3 id="吉比特以太网">吉比特以太网</h3>
+<h3 id="10吉比特以太网和更快以太网">10吉比特以太网和更快以太网</h3>
+<hr>
 
       
     </div>
@@ -806,7 +855,7 @@ a越大，表明争用期所占的比例越大，每发生一次碰撞就浪费�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要内容"><span class="nav-text">主要内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用点对点信道的数据链路层"><span class="nav-text">使用点对点信道的数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本知识"><span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三个基本问题"><span class="nav-text">三个基本问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-封装成帧-framing"><span class="nav-text">1.封装成帧（framing）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-透明传输"><span class="nav-text">2.透明传输</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-差错检测"><span class="nav-text">3.差错检测</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点到点信道"><span class="nav-text">点到点信道</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp点对点协议"><span class="nav-text">PPP点对点协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp协议的组成"><span class="nav-text">PPP协议的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp协议的帧格式"><span class="nav-text">PPP协议的帧格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp协议的工作状态"><span class="nav-text">PPP协议的工作状态</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用广播信道的数据链路层"><span class="nav-text">使用广播信道的数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#csma-cd协议"><span class="nav-text">CSMA/CD协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二进制指数类型退避算法"><span class="nav-text">二进制指数类型退避算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以太网"><span class="nav-text">以太网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#星型拓扑"><span class="nav-text">星型拓扑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以太网的mac层"><span class="nav-text">以太网的MAC层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mac层的硬件地址"><span class="nav-text">MAC层的硬件地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mac帧的格式"><span class="nav-text">MAC帧的格式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要内容"><span class="nav-text">主要内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用点对点信道的数据链路层"><span class="nav-text">使用点对点信道的数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本知识"><span class="nav-text">基本知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三个基本问题"><span class="nav-text">三个基本问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-封装成帧-framing"><span class="nav-text">1.封装成帧（framing）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-透明传输"><span class="nav-text">2.透明传输</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-差错检测"><span class="nav-text">3.差错检测</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点到点信道"><span class="nav-text">点到点信道</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp点对点协议"><span class="nav-text">PPP点对点协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp协议的组成"><span class="nav-text">PPP协议的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp协议的帧格式"><span class="nav-text">PPP协议的帧格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ppp协议的工作状态"><span class="nav-text">PPP协议的工作状态</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用广播信道的数据链路层"><span class="nav-text">使用广播信道的数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#csma-cd协议"><span class="nav-text">CSMA/CD协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二进制指数类型退避算法"><span class="nav-text">二进制指数类型退避算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以太网"><span class="nav-text">以太网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#星型拓扑"><span class="nav-text">星型拓扑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以太网的mac层"><span class="nav-text">以太网的MAC层</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mac层的硬件地址"><span class="nav-text">MAC层的硬件地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mac帧的格式"><span class="nav-text">MAC帧的格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扩展的以太网"><span class="nav-text">扩展的以太网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#物理层的扩展"><span class="nav-text">物理层的扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据链路层的扩展"><span class="nav-text">数据链路层的扩展</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高速以太网"><span class="nav-text">高速以太网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#100base-t"><span class="nav-text">100BASE-T</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#吉比特以太网"><span class="nav-text">吉比特以太网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10吉比特以太网和更快以太网"><span class="nav-text">10吉比特以太网和更快以太网</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -847,7 +896,7 @@ a越大，表明争用期所占的比例越大，每发生一次碰撞就浪费�
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.5k</span>
+    <span title="Site words total count">8.8k</span>
   
 </div>
 
